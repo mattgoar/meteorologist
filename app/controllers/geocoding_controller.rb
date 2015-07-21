@@ -11,7 +11,7 @@ class GeocodingController < ApplicationController
     @street_address = params[:user_street_address]
 
 
-    if @street_address == ""
+    if @street_address.blank?
       render :file => 'public/500.html', :status => 500, :layout => false
     else
 
